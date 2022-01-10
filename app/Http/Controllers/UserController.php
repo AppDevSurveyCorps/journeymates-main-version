@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -187,17 +187,17 @@ class UserController extends Controller
     }
 
     
-    // public function trending()
-    // {
+    public function trending()
+    {
        
-    //         $page_viewer_count = DB::table('catagories')->get();
-    //         $data = DB::table('catagories')->get();
-    //         $dataplace = DB::table('tblplaces')
-    //             ->where('intCatId', '=', 5)
-    //             ->get();
-    //         return view('index', ['data' => $data], ['place' => $dataplace]);
+            $page_viewer_count = DB::table('catagories')->get();
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 5)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
    
-    // }
+    }
 
    
 
@@ -470,7 +470,7 @@ class UserController extends Controller
     }
 
     
-} -->
+}
 
 
 
