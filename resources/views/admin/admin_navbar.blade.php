@@ -1,4 +1,4 @@
-<div class="flex-1 flex flex-col overflow-hidden">
+{{-- <div class="flex-1 flex flex-col overflow-hidden">
     <header class="flex justify-between items-center p-6">
         <div class="flex items-center space-x-4 lg:space-x-0">
             <button @click="sidebarOpen = true"
@@ -71,4 +71,4 @@
                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Logout</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
