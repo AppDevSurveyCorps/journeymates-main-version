@@ -102,7 +102,7 @@ class UserController extends Controller
             return redirect('/index');
         }else {// false
         //Login Fail
-        return back()->with('loginError', 'Incorrect credentials, please try again!');
+        return back()->with('loginError', 'Incorrect credentials, please try again.');
         }
 
        

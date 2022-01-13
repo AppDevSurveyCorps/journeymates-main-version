@@ -21,12 +21,7 @@
     </div>
     @endif
 
-    @if(session()->has('loginError'))
-    <div class="alert alert-danger-dismissable fade show" role="alert">
-      {{ session('loginError') }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="CLose"></button>
-    </div>
-    @endif
+    
     
     <h1 class="text-xl font-semibold"><b>JourneyMates </b><br><span class="font-normal">sign-in to unlock the best of JourneyMates</span></h1>
 
@@ -48,8 +43,14 @@
       
       
       <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
-      <input id="password" type="password" name="password" placeholder="********" autocomplete="current-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
-      <button type="submit" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+      <input id="password" type="password" name="password" placeholder="********" autocomplete="current-password" class="block w-full p-3 mt-2 mb-6 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+      @if(session()->has('loginError'))
+    <div class="alert alert-danger-dismissable fade show" role="alert">
+      {{ session('loginError') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="CLose"></button>
+    </div>
+    @endif
+      <button type="submit" class="w-full py-3 mt-2 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
         Log in
       </button>
       <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 ">Don't have an account ? <a href="{{ url('register') }}"class="text-black-700 hover:underline dark:text-black-500 cursor-pointer hover:text-black">Create
