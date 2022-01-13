@@ -27,6 +27,7 @@ class User extends Authenticatable
         'UpdationDate',
         'updated_at',
         'created_at',
+        'role',
     ];
 
     /**

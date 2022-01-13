@@ -25,7 +25,7 @@ class UserController extends Controller
     public function index()
     {
         if(Auth::check()) {
-                return redirect()->route('index');
+                return redirect('/index');
             }
     
                 return view('includes/signin');
@@ -34,7 +34,7 @@ class UserController extends Controller
     public function signin()
     {
         if(Auth::check()) {
-            return redirect()->route('index');
+                return redirect('/index');
         }
 
             return view('includes/signin');
@@ -143,19 +143,26 @@ class UserController extends Controller
         return view('reviewhome');
     }
 
-    public function admin()// not fixed
+  
+    public function manage() 
     {
+        $users = DB::table('users')->paginate(5);
+       
+
+        return view('admin.admin_manageusers', ['user' => $users]);
         
-        
-        return view('admin/admin_dashboard');
     }
 
-    public function manage() //not fixed
+    public function delete($id) 
     {
         
+        $deleted = DB::table('users')->where('user_id', '=', $id)->delete();
+
+        return redirect('/admin');
         
-        return view('admin/admin_manageusers');
     }
 }
+
+
 
     
