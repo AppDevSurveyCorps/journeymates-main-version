@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,8 +51,25 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/signout','App\Http\Controllers\UserController@logout'); 
 
+    
+    if (Auth::check()) {
+        $roles = Auth::user()->role;
+        print_r($roles);
+    
+    
+    
+    if($roles == 'ADMIN'){
+        
+    
+    }
+   }
+}
+);
+
+Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('admin', [AdminController::class, 'admin']); 
     Route::get('manage', [UserController::class, 'manage']); 
 
     Route::get('delete/{id}',[UserController::class,'delete']);
-});
+    
+  });
