@@ -57,7 +57,7 @@
                                     <img onclick="dropdown()" class="h-12 w-12 dropbtn cursor-pointer rounded-full object-cover" src="https://i.pinimg.com/474x/64/b2/95/64b295c8c9df6a71bb8e72adcb1bb6cd.jpg" alt="">
                                     <!-- Dropdown list -->
                                     <div id="myDropdown" class="absolute right-0 py-2 mt-2 bg-white bg-gray-100 rounded-md shadow-xl w-44 dropdown-content hidden z-50">
-                                        <h1 class="block px-4 py-2 text-lg text-gray-300 text-gray-700">Hi, Alan</h1><hr>
+                                        <h1 class="block px-4 py-2 text-lg text-gray-300 text-gray-700">Hi, {{ auth()->user()->fname }}</h1><hr>
                                         <a href="{{ url('profile') }}" class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
                                             My Profile
                                         </a>
