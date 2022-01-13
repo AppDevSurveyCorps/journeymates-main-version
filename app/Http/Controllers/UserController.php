@@ -103,8 +103,10 @@ class UserController extends Controller
         }else {// false
         //Login Fail
         Session::flash('error', 'Wrong email or password');
-        return redirect('/signin');
+        return back()->with('loginError', 'Login failed!');
         }
+
+       
     }
      
     public function logout()
@@ -142,14 +144,14 @@ class UserController extends Controller
         return view('reviewhome');
     }
 
-    public function admin()
+    public function admin()// not fixed
     {
         
         
         return view('admin/admin_dashboard');
     }
 
-    public function manage()
+    public function manage() //not fixed
     {
         
         
