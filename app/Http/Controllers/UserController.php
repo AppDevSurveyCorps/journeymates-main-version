@@ -141,6 +141,20 @@ class UserController extends Controller
         
         return view('reviewhome');
     }
+
+    public function admin()
+    {
+        
+        
+        return view('admin/admin_dashboard');
+    }
+
+    public function manage()
+    {
+        
+        
+        return view('admin/admin_manageusers');
+    }
 }
 
     

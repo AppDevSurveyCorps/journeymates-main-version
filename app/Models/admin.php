@@ -17,10 +17,10 @@ class admin extends Model
      * @var array
      */
     protected $table = "admin";
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'admin_id';
     protected $fillable = [
-        'UserName',
-        'Password',
+        'admin_username',
+        'admin_password',
         'updationDate',
     ];
 

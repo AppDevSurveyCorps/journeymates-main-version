@@ -28,12 +28,17 @@ Route::post('register',[UserController::class, 'store'])->name('test.store');
 Route::get('index', [HomeController::class, 'index']);
 
 
-Route::get('/signout','App\Http\Controllers\UserController@logout'); 
+
 
 
 Route::get('dashboard','App\Http\Controllers\UserController@dashboard'); 
 
 Route::get('reviewhome', [UserController::class, 'reviewhome']);
+
+Route::get('admin', [UserController::class, 'admin']); 
+Route::get('manage', [UserController::class, 'manage']); 
+
+
 
 
 Route::group(['middleware' => 'auth'], function(){
@@ -41,7 +46,7 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('bookmarks', [UserController::class, 'bookmarks']);
 
-    
+    Route::get('/signout','App\Http\Controllers\UserController@logout'); 
 
 
 });
