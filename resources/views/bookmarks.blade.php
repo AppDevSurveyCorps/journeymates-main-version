@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@700&family=Quicksand:wght@700&display=swap"
         rel="stylesheet">
 </head>
+
 <body class="bg-gray-200">
     <div class="relative min-h-screen">
         <div class="pb-32">
@@ -22,11 +24,13 @@
             @include('includes.navbar')
             <div class="container mx-auto pt-48">
                 <h1 class="text-2xl text-center" style="font-family: 'Nunito', sans-serif;">Bookmarks</h1>
-                <h2 class="text-2xl text-center mt-24" style="font-family: 'Nunito', sans-serif;">Looks like you still don't have any bookmark. Start saving your wishlist destination trip, travel later!</h2>
+                <h2 class="text-2xl text-center mt-24" style="font-family: 'Nunito', sans-serif;">Looks like you still
+                    don't have any bookmark. Start saving your wishlist destination trip, travel later!</h2>
             </div>
-        </div>          
+        </div>
         <!--footer-->
         @include('includes.footer')
     </div>
 </body>
+
 </html>

@@ -31,7 +31,7 @@
     <form action="/login" method="POST" mt-6>
       @csrf
 
-      <label for=" " class="block text-xs font-semibold text-gray-600 uppercase">E-mail</label>
+      <label for="email" class="block text-xs font-semibold text-gray-600 uppercase mt-6">E-mail</label>
         @error('email')
         <div class="invalid-feedback">
           {{ $message }}
