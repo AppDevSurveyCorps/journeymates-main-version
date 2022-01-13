@@ -27,8 +27,10 @@ use Illuminate\Support\Facades\Auth;
                 <div class="mx-12">
                     <div class="container flex flex-wrap justify-between items-center">
                         <a href="#">
-                            <div class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">
+                            <div
+                                class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">
                                     Hotels
                                     <svg width="32" height="20" viewBox="0 0 32 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -41,7 +43,8 @@ use Illuminate\Support\Facades\Auth;
                         <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">
                                     Restaurants
                                     <svg width="17" height="24" viewBox="0 0 17 24" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -54,7 +57,8 @@ use Illuminate\Support\Facades\Auth;
                         <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">Landmarks
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">Landmarks
                                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M32 32H0V29.3333H1.33333V20C1.31467 19.2493 0.764 18.6867 0 18.6667V12H2.66667V14.6667H5.33333V12H8V16H9.33333V8H12V10.6667H14.6667V0L21.3333 2.66667L16 5.33333V8H17.3333V10.6667H20V8H22.6667V16H24V12H26.6667V14.6667H29.3333V12H32V18.6667C31.3027 18.6667 30.6907 19.1893 30.6667 19.9987V29.3333H32V32ZM17.3333 30.6667V25.3333C17.3333 24.5973 16.736 24 16 24C15.264 24 14.6667 24.5973 14.6667 25.3333V30.6667H17.3333ZM20 13.3333H12V18.6667H5.33333V17.3333H2.98133C3.66 18.116 3.976 18.9573 4 19.9667V29.3333H12V25.3333C12 23.1253 13.792 21.3333 16 21.3333C18.2067 21.3333 20 23.1267 20 25.3333V29.3333H28V19.9653C28.0253 18.968 28.3347 18.1133 29.0187 17.3333H26.6667V18.6667H20V13.3333ZM9.33333 25.3333H6.66667V22.6667C6.66667 21.9307 7.264 21.3333 8 21.3333C8.736 21.3333 9.33333 21.9307 9.33333 22.6667V25.3333ZM25.3333 25.3333H22.6667V22.6667C22.6667 21.9307 23.264 21.3333 24 21.3333C24.736 21.3333 25.3333 21.9307 25.3333 22.6667V25.3333ZM17.3333 18.6667H14.6667V16C14.6667 15.264 15.264 14.6667 16 14.6667C16.736 14.6667 17.3333 15.264 17.3333 16V18.6667Z"
@@ -66,7 +70,8 @@ use Illuminate\Support\Facades\Auth;
                         <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">Trending
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">Trending
                                     <svg width="28" height="32" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M15.3333 12H27.3333L8.66667 32L12.6667 20H0.666672L19.3333 0L15.3333 12ZM3.73467 18.6667H14.516L11.8667 26.6173L24.2653 13.3333H13.484L16.1333 5.38267L3.73467 18.6667Z"
@@ -78,7 +83,8 @@ use Illuminate\Support\Facades\Auth;
                         <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">Cities
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">Cities
                                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M16 2.66667H18.6667V5.33333H21.3333V10.2693L30.6667 13.76V30.6667H32V32H0V30.6667H1.33333V16H9.33333V5.33333H12V2.66667H14.6667V0H16V2.66667ZM20 6.66667H10.6667V30.6667H12V28H18.6667V30.6667H20V6.66667ZM17.3333 29.3333H13.3333V30.6667H17.3333V29.3333ZM28 30.6667H29.3333V14.684L21.3333 11.6933V30.6667H22.6667V28H28V30.6667ZM9.33333 17.3333H2.66667V30.6667H4V28H8V30.6667H9.33333V17.3333ZM6.66667 29.3333H5.33333V30.6667H6.66667V29.3333ZM26.6667 29.3333H24V30.6667H26.6667V29.3333ZM5.33333 22.6667V25.3333H4V22.6667H5.33333ZM8 22.6667V25.3333H6.66667V22.6667H8ZM14.6667 9.33333V25.3333H13.3333V9.33333H14.6667ZM28 24V25.3333H22.6667V24H28ZM17.3333 9.33333V25.3333H16V9.33333H17.3333ZM28 21.3333V22.6667H22.6667V21.3333H28ZM5.33333 18.6667V21.3333H4V18.6667H5.33333ZM8 18.6667V21.3333H6.66667V18.6667H8ZM28 18.6667V20H22.6667V18.6667H28ZM28 16V17.3333H22.6667V16H28ZM17.3333 4H13.3333V5.33333H17.3333V4Z"
@@ -90,7 +96,8 @@ use Illuminate\Support\Facades\Auth;
                         <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
-                                <div class="mx-8 my-4 flex justify-between items-center" style="font-family: 'Nunito', sans-serif;">Add a
+                                <div class="mx-8 my-4 flex justify-between items-center"
+                                    style="font-family: 'Nunito', sans-serif;">Add a
                                     Place
                                     <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -106,28 +113,32 @@ use Illuminate\Support\Facades\Auth;
             </div>
             <!--big searchbar-->
             <div class="container mx-auto pt-10">
-                <div class="mx-12 bg-center bg-cover" style="background-image: url(https://s3-alpha-sig.figma.com/img/6d5d/1bc9/bddbce21a89bf98295e7de6582d6b6b4?Expires=1642982400&Signature=IvRqsRqAgQNypSIdLUM4rfUh2Xp3kcxiuLmrOUh8RxiimvhfwqeynidSfSLvNFU0IDqhs8Axhvdacjsugqgb2y~I920UgA7E8nl67te0PZCaUti3Soa5RYClbM2~oQrR2Z4rOWxQvq8fES6Zo6zvN1uyp9NMosaDJXJKFls-4AqPp05gG8sP51jkgwrX8y4B01pHoQFLVpYMioXYDojPUyeak2Wh2Bfzb7kQqsLqSaE9xGIQcCDfbGklVJpKXjGArKOEzxwruZppYnnW0zyeq8g4IxEbsc9S8Z8nMG82Exw2CC-wwOqB0XqNRwn6ooA3tLNoNjr5w2zRPmcA~cL1lw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)">
+                <div class="mx-12 bg-center bg-cover"
+                    style="background-image: url(https://s3-alpha-sig.figma.com/img/6d5d/1bc9/bddbce21a89bf98295e7de6582d6b6b4?Expires=1642982400&Signature=IvRqsRqAgQNypSIdLUM4rfUh2Xp3kcxiuLmrOUh8RxiimvhfwqeynidSfSLvNFU0IDqhs8Axhvdacjsugqgb2y~I920UgA7E8nl67te0PZCaUti3Soa5RYClbM2~oQrR2Z4rOWxQvq8fES6Zo6zvN1uyp9NMosaDJXJKFls-4AqPp05gG8sP51jkgwrX8y4B01pHoQFLVpYMioXYDojPUyeak2Wh2Bfzb7kQqsLqSaE9xGIQcCDfbGklVJpKXjGArKOEzxwruZppYnnW0zyeq8g4IxEbsc9S8Z8nMG82Exw2CC-wwOqB0XqNRwn6ooA3tLNoNjr5w2zRPmcA~cL1lw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)">
                     <form class="flex pt-2 relative mx-auto text-gray-600 ">
-                            <input class="border-2 border-gray-300 bg-white h-16 w-full px-10 rounded-full text-xl focus:outline-none mx-12 my-32 leading-[4rem]"
+                        <input
+                            class="border-2 border-gray-300 bg-white h-16 w-full px-10 rounded-full text-xl focus:outline-none mx-12 my-32 leading-[4rem]"
                             type="search" name="search" placeholder="Search">
-                            <button type="submit" class="absolute right-20 top-40">
-                                <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                                    viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
-                                    width="512px" height="512px">
-                                    <path
+                        <button type="submit" class="absolute right-20 top-40">
+                            <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                                xml:space="preserve" width="512px" height="512px">
+                                <path
                                     d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                                </svg>
-                            </button>
-                        </form>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
             <!--small cards-->
             <div class="container mx-auto py-5 pb-16">
-                <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">You might also like these</h1>
+                <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">You might also like
+                    these</h1>
                 <div class="flex justify-between">
                     <div class="mx-12">
-                        <div class="relative pl-1 flex justify-center rounded-xl hover:scale-105 duration-500 transform transition cursor-pointer">
+                        <div
+                            class="relative pl-1 flex justify-center rounded-xl hover:scale-105 duration-500 transform transition cursor-pointer">
                             <!-- Tag Discount -->
                             <div class="w-72 pb-2 bg-white rounded-xl shadow-xl z-10">
                                 <div class="relative">
@@ -138,14 +149,15 @@ use Illuminate\Support\Facades\Auth;
                                     <div
                                         class="bottom-0 right-0 mb-2 mr-2 px-2 rounded-lg absolute bg-yellow-500 text-gray-100 text-xs font-medium">
                                         Recommended</div>
-                                    </div>
+                                </div>
                                 <div class="px-2 py-1">
                                     <!-- Product Title -->
                                     <div class="text-sm md:text-base font-bold pr-2">Shop Name
                                     </div>
                                     <div class="flex py-2">
                                         <!-- Distance -->
-                                        <div class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
+                                        <div
+                                            class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
                                             0.5 Km
                                         </div>
                                         <div class="flex justify-between item-center">
@@ -168,7 +180,8 @@ use Illuminate\Support\Facades\Auth;
                                     <!-- Alamat -->
                                     <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">Lorem ipsum dolor sit amet,
                                         consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua
                                     </p>
                                     <!-- Tombol pesan -->
                                     <a class="duration-500 transform transition inset-x-0 bottom-0 flex justify-center bg-emerald-400 hover:bg-white text-sm md:text-base border hover:border-emerald-500 rounded-xl p-1 text-gray-100 hover:text-emerald-500"
@@ -196,7 +209,8 @@ use Illuminate\Support\Facades\Auth;
                                     <div class="text-sm md:text-base font-bold pr-2">Shop Name</div>
                                     <div class="flex py-2">
                                         <!-- Distance -->
-                                        <div class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
+                                        <div
+                                            class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
                                             0.5 Km
                                         </div>
                                         <div class="flex justify-between item-center">
@@ -219,7 +233,8 @@ use Illuminate\Support\Facades\Auth;
                                     <!-- Alamat -->
                                     <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">Lorem ipsum dolor sit amet,
                                         consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua
                                     </p>
                                     <!-- Tombol pesan -->
                                     <a class="duration-500 transform transition inset-x-0 bottom-0 flex justify-center bg-emerald-400 hover:bg-white text-sm md:text-base border hover:border-emerald-500 rounded-xl p-1 text-gray-100 hover:text-emerald-500"
@@ -247,7 +262,8 @@ use Illuminate\Support\Facades\Auth;
                                     <div class="text-sm md:text-base font-bold pr-2">Shop Name</div>
                                     <div class="flex py-2">
                                         <!-- Distance -->
-                                        <div class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
+                                        <div
+                                            class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
                                             0.5 Km
                                         </div>
                                         <div class="flex justify-between item-center">
@@ -270,7 +286,8 @@ use Illuminate\Support\Facades\Auth;
                                     <!-- Alamat -->
                                     <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">Lorem ipsum dolor sit amet,
                                         consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua
                                     </p>
                                     <!-- Tombol pesan -->
                                     <a class="duration-500 transform transition inset-x-0 bottom-0 flex justify-center bg-emerald-400 hover:bg-white text-sm md:text-base border hover:border-emerald-500 rounded-xl p-1 text-gray-100 hover:text-emerald-500"
@@ -298,7 +315,8 @@ use Illuminate\Support\Facades\Auth;
                                     <div class="text-sm md:text-base font-bold pr-2">Shop Name</div>
                                     <div class="flex py-2">
                                         <!-- Distance -->
-                                        <div class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
+                                        <div
+                                            class="bg-gray-200 p-1 mr-2 rounded-full text-xs font-medium text-gray-900">
                                             0.5 Km
                                         </div>
                                         <div class="flex justify-between item-center">
@@ -321,7 +339,8 @@ use Illuminate\Support\Facades\Auth;
                                     <!-- Alamat -->
                                     <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">Lorem ipsum dolor sit amet,
                                         consectetur
-                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua
                                     </p>
                                     <!-- Tombol pesan -->
                                     <a class="duration-500 transform transition inset-x-0 bottom-0 flex justify-center bg-emerald-400 hover:bg-white text-sm md:text-base border hover:border-emerald-500 rounded-xl p-1 text-gray-100 hover:text-emerald-500"
