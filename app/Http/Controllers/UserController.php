@@ -102,8 +102,7 @@ class UserController extends Controller
             return redirect('/index');
         }else {// false
         //Login Fail
-        Session::flash('error', 'Wrong email or password');
-        return back()->with('loginError', 'Login failed!');
+        return back()->with('loginError', 'Incorrect credentials, please try again!');
         }
 
        
