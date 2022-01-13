@@ -33,7 +33,7 @@ Route::get('index', [HomeController::class, 'index']);
 
 Route::get('dashboard','App\Http\Controllers\UserController@dashboard'); 
 
-Route::get('reviewhome', [UserController::class, 'reviewhome']);
+
 
 Route::get('admin', [UserController::class, 'admin']); 
 Route::get('manage', [UserController::class, 'manage']); 
@@ -45,6 +45,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('profile', [UserController::class, 'profile']);
 
     Route::get('bookmarks', [UserController::class, 'bookmarks']);
+
+    Route::get('reviewhome', [UserController::class, 'reviewhome']);
 
     Route::get('/signout','App\Http\Controllers\UserController@logout'); 
 
