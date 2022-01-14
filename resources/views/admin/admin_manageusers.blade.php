@@ -63,8 +63,8 @@
                         <a href="{{ url('manage') }}"
                             class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">Manage
                             users</a>
-                        <a href="#"
-                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded"></a>
+                        <a href="{{ url('update') }}"
+                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">Update users</a>
                         <a href="#"
                             class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded"></a>
                         <a href="#"
@@ -234,6 +234,7 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                                   
                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                                                     </svg>
@@ -252,23 +253,7 @@
                                                 </tbody>
                                             </table>
                                             {{ $user->links() }}
-                                            {{-- <div
-                                                class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between          ">
-                                                <span class="text-xs xs:text-sm text-gray-900">
-                                                    Showing 1 to 4 of 50 Entries
-                                                </span>
-                                                <div class="inline-flex mt-2 xs:mt-0">
-                                                    <button
-                                                        class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-l">
-                                                        Prev
-                                                    </button>
-                                                    &nbsp; &nbsp;
-                                                    <button 
-                                                        class="text-sm text-indigo-50 transition duration-150 hover:bg-indigo-500 bg-indigo-600 font-semibold py-2 px-4 rounded-r">
-                                                        Next
-                                                    </button>
-                                                </div>
-                                            </div> --}}
+                                    
                                         </div>
                                     </div>
                                 </div>

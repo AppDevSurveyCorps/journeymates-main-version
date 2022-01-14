@@ -69,6 +69,7 @@ Route::group(['middleware' => 'auth'], function(){
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('admin', [AdminController::class, 'admin']); 
     Route::get('manage', [UserController::class, 'manage']); 
+    Route::get('update', [UserController::class, 'update']); 
 
     Route::get('delete/{id}',[UserController::class,'delete']);
     

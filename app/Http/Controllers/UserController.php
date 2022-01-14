@@ -153,6 +153,15 @@ class UserController extends Controller
         
     }
 
+    public function update() 
+    {
+       
+       
+
+        return view('admin.admin_update');
+        
+    }
+
     public function delete($id) 
     {
         
