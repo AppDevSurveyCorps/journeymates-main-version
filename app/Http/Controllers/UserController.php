@@ -158,7 +158,7 @@ class UserController extends Controller
         
         $deleted = DB::table('users')->where('user_id', '=', $id)->delete();
 
-        return redirect('/admin');
+        return redirect('/manage');
         
     }
 }
