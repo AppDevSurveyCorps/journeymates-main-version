@@ -144,7 +144,7 @@ class UserController extends Controller
     }
 
   
-    public function manage() 
+    public function manage_user() 
     {
         $users = DB::table('users')->paginate(5);
        
@@ -153,21 +153,35 @@ class UserController extends Controller
         
     }
 
-    public function update() 
+    public function edit_user($id) 
     {
        
-       
+        $users = DB::table('users')->where('user_id',$id)->get();
 
-        return view('admin.admin_update');
+        return view('/admin/admin_edit_user',['user' => $users]);
         
     }
 
-    public function delete($id) 
+
+    public function update_user(Request $request)
+    {
+
+	DB::table('users')->where('user_id',$request->id)->update([
+		'fname' => $request->fname,
+		'email' => $request->email,
+		'mnumber' => $request->mnumber,
+		'role' => $request->role,
+	]);
+	
+	return redirect('/manage_user');
+    }
+
+    public function delete_user($id) 
     {
         
         $deleted = DB::table('users')->where('user_id', '=', $id)->delete();
 
-        return redirect('/manage');
+        return redirect('/manage_user');
         
     }
 }

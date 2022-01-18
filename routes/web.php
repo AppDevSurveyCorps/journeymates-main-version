@@ -68,9 +68,12 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('admin', [AdminController::class, 'admin']); 
-    Route::get('manage', [UserController::class, 'manage']); 
-    Route::get('update', [UserController::class, 'update']); 
+    Route::get('manage_user', [UserController::class, 'manage_user']); 
 
-    Route::get('delete/{id}',[UserController::class,'delete']);
+    Route::get('/admin_edit_user/{id}', [UserController::class, 'edit_user']); 
+    Route::post('/admin_update_user', [UserController::class, 'update_user'])->name('test.update_user');
+
+
+    Route::get('delete/{id}',[UserController::class,'delete_user']);
     
   });

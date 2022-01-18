@@ -60,15 +60,9 @@
                     <nav class="flex flex-col mt-10 px-4 text-center">
                         <a href="{{ url('admin') }}"
                             class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">Overview</a>
-                        <a href="{{ url('manage') }}"
+                        <a href="{{ url('manage_user') }}"
                             class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">Manage
                             users</a>
-                        <a href="{{ url('update') }}"
-                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded">Update users</a>
-                        <a href="#"
-                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded"></a>
-                        <a href="#"
-                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 rounded"></a>
                     </nav>
                 </div>
 
@@ -234,7 +228,7 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                                                   
+                                                                    <a href = '/admin_edit_user/{{ $a->user_id }}'>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                                                     </svg>
