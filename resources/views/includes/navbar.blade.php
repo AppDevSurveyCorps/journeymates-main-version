@@ -53,7 +53,8 @@
                             <a href="#"
                                 class="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Alert</a>
                         </li>
-                        <?php if(Auth::check()){ ?>
+                         @if(Auth::check()) 
+                            
                         <li>
                             <div class="relative">
                                 <!-- Dropdown toggle button -->
@@ -71,6 +72,9 @@
                                         class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
                                         My Profile
                                     </a>
+                                    @if(Auth::user()->role == 'ADMIN')
+                                    <a class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white" href="{{ url('/admin') }}">Admin Dashboard</a>
+                                @endif
                                     <a href="{{ url('signout') }}"
                                         class="block px-4 py-2 text-sm text-gray-300 text-gray-700 hover:bg-gray-400 hover:text-white">
                                         Sign Out
@@ -95,13 +99,13 @@
                                         }
                             </script>
                         </li>
-                        <?php } else{ ?>
+                         @else
                         <li>
                             <a href="{{ url('login') }}"
                                 class="block py-2 pr-4 pl-3 text-gray-400 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent">Log
                                 In</a>
                         </li>
-                        <?php } ?>
+                        @endif
                     </ul>
                 </div>
             </div>
