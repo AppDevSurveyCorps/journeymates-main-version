@@ -62,6 +62,10 @@
                             class="py-2 text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-800 rounded">Overview</a>
                         <a href="{{ url('manage_user') }}"
                             class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100  hover:bg-gray-200 dark:hover:bg-gray-800 rounded">Manage users</a>
+                        
+                        <a href="{{ url('manage_place') }}"
+                            class="mt-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-100  hover:bg-gray-200 dark:hover:bg-gray-800 rounded">Manage users</a>
+
                     </nav>
                 </div>
 
@@ -115,7 +119,7 @@
                             <div x-data="{ dropdownOpen: false }" class="relative">
                                 <button @click="dropdownOpen = ! dropdownOpen"
                                     class="flex items-center space-x-2 relative focus:outline-none">
-                                    <h2 class="text-gray-700 dark:text-gray-300 text-sm hidden sm:block">Alan Tuner
+                                    <h2 class="text-gray-700 dark:text-gray-300 text-sm hidden sm:block">{{ucwords(auth()->user()->fname)}}
                                     </h2>
                                     <img class="h-9 w-9 rounded-full border-2 border-purple-500 object-cover"
                                         src="https://images.unsplash.com/photo-1553267751-1c148a7280a1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"

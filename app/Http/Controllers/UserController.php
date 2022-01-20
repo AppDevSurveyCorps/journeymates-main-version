@@ -184,6 +184,15 @@ class UserController extends Controller
         return redirect('/manage_user');
         
     }
+
+    public function manage_place() 
+    {
+        $places = DB::table('tblplaces')->paginate(5);
+       
+
+        return view('admin.admin_manageplaces', ['place' => $places]);
+        
+    }
 }
 
 
