@@ -192,6 +192,27 @@ class UserController extends Controller
 
         return view('admin.admin_manageplaces', ['place' => $places]);
         
+        
+    }
+
+    public function store_place(Request $request)
+    {
+        // Validate the request...
+        
+
+        $add = new user;
+
+        $add->place_name = $request->place_name;
+        $add->place_description = $request->place_description;
+        $add->place_ratings = $request->place_ratings;
+        // $add->place_picture = Hash::make($request->password);
+        // $add->page_viewer_count = date("Y/m/d");
+       
+
+        $add->save();
+        
+        // auth()->login($add);
+        return redirect('/admin');
     }
 }
 

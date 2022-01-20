@@ -134,11 +134,11 @@
                                     x-transition:leave="transition ease-in duration-75 transform"
                                     x-transition:leave-start="opacity-100 scale-100"
                                     x-transition:leave-end="opacity-0 scale-95" @click.away="dropdownOpen = false">
-                                    <a href="#"
+                                    <a href="{{ url('profile') }}"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Profile</a>
                                     <a href="#"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white"></a>
-                                    <a href="/login"
+                                    <a href="{{ url('signout') }}"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-600 hover:text-white">Logout</a>
                                 </div>
                             </div>
