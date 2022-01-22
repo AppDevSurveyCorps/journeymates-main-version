@@ -16,14 +16,16 @@ class tblplaces extends Model
      *
      * @var array
      */
-    protected $table = "tblplaces";
+    // protected $table = "tblplaces";
     protected $primaryKey = 'place_id';
     protected $fillable = [
         'place_name',
         'place_description',
         'place_ratings',
-        'place_picture',
+        'place_image',
         'page_viewer_count',
+        'updated_at',
+        'created_at',
     ];
 
 

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 
 use App\Models\tblplaces;
-use App\Models\tblusers;
 use App\Models\user;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -198,21 +197,42 @@ class UserController extends Controller
     public function store_place(Request $request)
     {
         // Validate the request...
-        
+      
+        $name = $request->file('place_image')->getClientOriginalName();  
+        $path = $request->file('place_image')->store('public/images');
+        $placeinfo = pathinfo($path)['basename'];
 
-        $add = new user;
+        $add = new tblplaces;
 
         $add->place_name = $request->place_name;
         $add->place_description = $request->place_description;
         $add->place_ratings = $request->place_ratings;
-        // $add->place_picture = Hash::make($request->password);
-        // $add->page_viewer_count = date("Y/m/d");
+        $add->place_image = $placeinfo;
+        $add->page_viewer_count = 1;
+       
+
+
        
 
         $add->save();
         
-        // auth()->login($add);
-        return redirect('/admin');
+       
+        return redirect('/manage_place');
+    }
+
+    public function add_place()
+    {
+        
+        // $data['data_place'] = tblplaces::all();
+        return view('admin/admin_addplace');
+    }
+
+    public function delete_place($id)
+    {
+        $deleted = DB::table('tblplaces')->where('place_id', '=', $id)->delete();
+
+        return redirect('/manage_place');
+        
     }
 }
 
