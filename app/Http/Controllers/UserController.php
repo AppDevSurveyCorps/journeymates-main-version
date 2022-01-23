@@ -261,19 +261,75 @@ class UserController extends Controller
 	]);
 
     
-    // if($request -> hasFile('place_image'))
-    // {
-    //     $destination = 'admin_update_place';
-    //     $file = $request ->file('place_image');
-    //     $extention = $file->getClientOriginalExtension();
-    //     $filename = time(). '.'.$extention;
-    //     $file -> move()
-
-
-
-    // }
+   
 	
 	return redirect('/manage_place');
+    }
+
+
+
+    public function manage_category() 
+    {
+        $categories = DB::table('catagories')->paginate(5);
+       
+
+        return view('admin.admin_managecategory', ['category' => $categories]);
+        
+    }
+
+    public function store_category(Request $request)
+    {
+        // Validate the request...
+      
+        $update = new catagories();
+
+        $update->Categories = $request->Categories;
+        $update->Icon = $request->Icon;
+       
+       
+
+        $update->save();
+        
+       
+        return redirect('/manage_category');
+    }
+
+
+    public function add_category()
+    {
+        
+        // $data['data_place'] = tblplaces::all();
+        return view('admin/admin_addcategory');
+    }
+
+    public function delete_category($id)
+    {
+        $deleted = DB::table('catagories')->where('intCatId', '=', $id)->delete();
+
+        return redirect('/manage_category');
+        
+    }
+
+    public function edit_category($id) 
+    {
+       
+        $categories = DB::table('catagories')->where('intCatId',$id)->get();
+
+        return view('/admin/admin_editcategory',['category' => $categories]);
+        
+    }
+
+    public function update_category(Request $request)
+    {
+
+	    DB::table('catagories')->where('intCatId',$request->id)->update([
+		'Categories' => $request->Categories,
+		'Icon' => $request->Icon,
+		
+
+        
+	]);
+    return redirect('/manage_category');
     }
 }
 

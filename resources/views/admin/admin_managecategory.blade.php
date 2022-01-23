@@ -59,19 +59,20 @@
                             <div class="bg-white p-8 rounded-md w-full">
                                 <div class=" flex items-center justify-between pb-6">
                                     <div>
-                                        <h2 class="text-gray-600 font-semibold">Admins</h2>
-                                        <span class="text-xs">All Users Information</span>
+                                        <h2 class="text-gray-600 font-semibold">Place</h2>
+                                        <span class="text-xs">All Place</span>
                                     </div>
                                     <div class="flex items-center justify-between">
                                         <div class="flex bg-gray-50 items-center p-2 rounded-md">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400"
+                                            {{-- <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400"
                                                 viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd"
                                                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                                     clip-rule="evenodd" />
-                                            </svg>
-                                            <input class="bg-gray-50 outline-none ml-1 block " type="text" name="" id=""
-                                                placeholder="search...">
+                                            </svg> --}}
+                                            <a href='/add_category' class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
+                                                Create new category
+                                            </a>
                                         </div>
                                        
                                     </div>
@@ -84,19 +85,11 @@
                                                     <tr>
                                                         <th
                                                             class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                                            Name
+                                                            Category list
                                                         </th>
                                                         <th
                                                             class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                                            Email
-                                                        </th>
-                                                        <th
-                                                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                                            Mobile Number
-                                                        </th>
-                                                        <th
-                                                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                                                            Role
+                                                            Icon
                                                         </th>
                                                         <th
                                                             class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
@@ -105,31 +98,30 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($user as $a) 
+                                                    @foreach ($category as $c) 
                                                     <tr>
                                                         <td class="px-5 py-5 bg-white text-sm">
                                                             <div class="flex items-center">
-                                                                <div class="flex-shrink-0 w-10 h-10">
-                                                                    <img class="w-full h-full rounded-full"
-                                                                        src="https://images.unsplash.com/photo-1522609925277-66fea332c575?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.2&h=160&w=160&q=80"
-                                                                        alt="" />
-                                                                </div>
+                                                              
                                                                 <div class="ml-3">
                                                                     <p class="text-gray-900 whitespace-no-wrap">
-                                                                        {{ $a->fname }}
+                                                                        {{ $c->Categories }}
                                                                     </p>
                                                                 </div>
                                                             </div>
                                                         </td>
                                                         <td class="px-5 py-5 bg-white text-sm">
-                                                            <p class="text-gray-900 whitespace-no-wrap">{{ $a->email }}</p>
+                                                            <i class= "{{ $c->Icon }}" width="100" height="100" viewBox="0 0 32 20"></i>
+                                                        </td>
+                                                        {{-- <td class="px-5 py-5 bg-white text-sm">
+                                                            <p class="text-gray-900 whitespace-no-wrap">{{ $p->place_ratings }}</p>
                                                         </td>
                                                         <td class="px-5 py-5 bg-white text-sm">
-                                                            <p class="text-gray-900 whitespace-no-wrap">{{ $a->mnumber }}</p>
-                                                        </td>
-                                                        <td class="px-5 py-5 bg-white text-sm">
-                                                            <p class="text-gray-900 whitespace-no-wrap">{{ $a->role }}</p>
-                                                        </td>
+                                                            @if ($p->place_image)
+                                                            
+                                                            <img src="{{ asset('storage/images/' . $p->place_image) }}" width="140px" height="140px">
+                                                            @endif
+                                                        </td> --}}
                                                         
                                                         <td class="py-3 px-6 text-center">
                                                             <div class="flex item-center justify-center">
@@ -140,13 +132,13 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                                                    <a href = '/admin_edit_user/{{ $a->user_id }}'>
+                                                                    <a href = '/admin_editcategory/{{ $c->intCatId }}'>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                                                     </svg>
                                                                 </div>
                                                                 <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
-                                                                    <a href = 'delete/{{ $a->user_id }}'>
+                                                                    <a href = 'delete/{{ $c->intCatId }}'>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                                                     </svg>
@@ -158,7 +150,7 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
-                                            {{ $user->links() }}
+                                            {{ $category->links() }}
                                     
                                         </div>
                                     </div>

@@ -81,13 +81,19 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('delete/{id}',[UserController::class,'delete_user']);
 
-
-
-    Route::get('delete/{id}',[UserController::class,'delete_place']);
+     Route::get('delete/{id}',[UserController::class,'delete_place']);
 
     Route::get('/admin_editplace/{id}', [UserController::class, 'edit_place']); 
     Route::post('/admin_update_place', [UserController::class, 'update_place'])->name('test.update_place');
-    // Route::put('admin_update_place/{id}' , [UserController::class, 'edit_place']);
     
+    Route::get('manage_category', [UserController::class, 'manage_category']);
+
+    Route::get('add_category',[UserController::class, 'add_category']); 
+    Route::post('add_category',[UserController::class, 'store_category'])->name('category.store'); 
+
+    Route::get('delete/{id}',[UserController::class,'delete_category']);
+
+    Route::get('/admin_editcategory/{id}', [UserController::class, 'edit_category']); 
+    Route::post('/admin_updatecategory', [UserController::class, 'update_category'])->name('test.update_category');
     
   });
