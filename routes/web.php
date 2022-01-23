@@ -51,6 +51,9 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('/signout','App\Http\Controllers\UserController@logout'); 
 
+    Route::get('add_place',[UserController::class, 'add_place']); 
+    Route::post('add_place',[UserController::class, 'store_place'])->name('place.store'); 
+
     
     if (Auth::check()) {
         $roles = Auth::user()->role;
@@ -78,8 +81,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('delete/{id}',[UserController::class,'delete_user']);
 
-    Route::get('add_place',[UserController::class, 'add_place']); 
-    Route::post('add_place',[UserController::class, 'store_place'])->name('place.store'); 
+
 
     Route::get('delete/{id}',[UserController::class,'delete_place']);
 
