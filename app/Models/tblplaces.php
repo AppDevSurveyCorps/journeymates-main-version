@@ -22,6 +22,7 @@ class tblplaces extends Model
         'place_name',
         'place_description',
         'place_ratings',
+        'total_user_reviews',
         'place_image',
         'page_viewer_count',
         'updated_at',

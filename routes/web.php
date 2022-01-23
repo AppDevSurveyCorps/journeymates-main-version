@@ -47,9 +47,10 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('bookmarks', [UserController::class, 'bookmarks']);
 
-    Route::get('reviewhome', [UserController::class, 'reviewhome']);
-
     Route::get('/signout','App\Http\Controllers\UserController@logout'); 
+
+    Route::get('places/{id}', [UserController::class, 'reviewhome']);
+    Route::post('places', [UserController::class, 'reviewpost']);
 
     Route::get('add_place',[UserController::class, 'add_place']); 
     Route::post('add_place',[UserController::class, 'store_place'])->name('place.store'); 
@@ -77,7 +78,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('/admin_update_user', [UserController::class, 'update_user'])->name('test.update_user');
 
     Route::get('manage_place', [UserController::class, 'manage_place']);
-
 
     Route::get('delete/{id}',[UserController::class,'delete_user']);
 

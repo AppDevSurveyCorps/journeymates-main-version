@@ -137,13 +137,34 @@ class UserController extends Controller
         return view('bookmarks');
     }
 
-    public function reviewhome()
+    public function reviewhome($id)
     {
-        
-        
-        return view('reviewhome');
+        $place = DB::table('tblplaces')->where('place_id', $id)->first();
+        $dbviewercount = $place->page_viewer_count;
+        DB::table('tblplaces')->where('place_id',$id)->update([
+            'page_viewer_count' => $dbviewercount + 1,
+        ]);
+        return view('places' , ['place' => $place]);
     }
 
+    public function reviewpost (Request $request) {
+        $place_id = $request->place_id;
+        $place = DB::table('tblplaces')->where('place_id', $place_id)->first();
+        $dbrating = $place->place_ratings;
+        $inputedstar = $request->input('star');
+        $postedrating = $dbrating + $inputedstar;
+        $posteduser = $place->total_user_reviews + 1;
+        $total = $postedrating / $posteduser;
+        $postedtotal = round($total);
+
+        DB::table('tblplaces')->where('place_id',$place_id)->update([
+            'place_ratings' => $postedrating,
+            'total_user_reviews' => $posteduser,
+            'total_place_rating' => $postedtotal
+        ]);
+
+        return redirect('/index');
+    }
   
     public function manage_user() 
     {
@@ -211,10 +232,6 @@ class UserController extends Controller
         $add->place_ratings = $request->place_ratings;
         $add->place_image = $placeinfo;
         $add->page_viewer_count = 1;
-       
-
-
-       
 
         $add->save();
         
