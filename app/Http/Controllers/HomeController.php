@@ -24,9 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        
-        // $data['data_place'] = tblplaces::all();
-        return view('index');
+        $data = DB::table('catagories')->get();
+        $dataplace = DB::table('tblplaces')->get();
+        return view('index', ['data' => $data], ['place' => $dataplace]);
     }
 
 }

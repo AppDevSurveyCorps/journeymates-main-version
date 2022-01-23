@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\tblplaces;
+use App\Models\catagories;
 use App\Models\user;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -24,9 +25,10 @@ class UserController extends Controller
     public function index()
     {
         if(Auth::check()) {
-                return redirect('/index');
+                $data = DB::table('catagories')->get();
+                $dataplace = DB::table('tblplaces')->get();
+                return view('index', ['data' => $data], ['place' => $dataplace]);
             }
-    
                 return view('includes/signin');
     }
 
