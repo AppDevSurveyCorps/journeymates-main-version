@@ -133,17 +133,6 @@ use Illuminate\Support\Facades\Auth;
             </div>
             <!--small cards-->
             <div class="container mx-auto py-5 pb-16">
-                <div class="hidden">
-                    <?php
-                    $tempshorts=[];
-                    for ($i=0; $i < 4; $i++) { 
-                        $tempshorts[$i]=rand(5, 15);
-                     } 
-                    foreach($tempshorts as $tempshort){
-                    echo $tempshort . "\n";
-                    }
-                     ?>
-                    </div>
                 <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">You might also like
                     these</h1>
                 <div class="flex justify-between">
@@ -373,7 +362,7 @@ use Illuminate\Support\Facades\Auth;
                             </h1>
                         </div>
                         <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/72f0/4146/5f93f37b9ef9941e3ca8314daaf4fd80?Expires=1643587200&Signature=hz9~EOQsOErWw4GLnQmb95eV44CAT~0Vfkp0OHfeyg3Iif4Z4uZG8t2OroT9lhDOq6etFvVnWhvWhSLf6PEpqSkL9lDidVzsnzVzW3rYcedm-oa064Xbeto4YYjbXKE7GTgloQBOhU4tNgm9adpxPe7HX05bO-HWrAofhSHSc3s1zbvs1nVDIMxCxyAGYy1ov9bxUdZkAjy3QIqsxlFrWLfL9iFPb-XMLBpt7q8Y3qrx-qc5pNrUBOPkv6k1Ao3wk05vdUZz8xVIA9q7fPTclSv9LfvfDaIC72SZvDmbIlrF75yqniFiZMkzWnQoeNiY~JtVLkU1ufWCXAQgA7q0CQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                            src="https://s3-alpha-sig.figma.com/img/72f0/4146/5f93f37b9ef9941e3ca8314daaf4fd80?Expires=1642377600&Signature=X6BpnHNSRabh6CRzGC3MdlCqRrEZbtBC8djYw6fleeYPIvIdZTmjWcTB-5usvpSjDeftq2UEzOT-XkbIAqK0iZ0ARvBrDTQIejrSw55z5s1pMzEwbmsUfUtpWsKGyEhS-qDdCqibiyUjpd4nnzufcdLv2taWkgFvv1uhIeCVaYkJnLnm1e7CRs4gMXFURPWTLsh~0tvZcww0pOSjYG0MB2RNP1cUhpjQ~nU1NxlajqBPA3GvBU~UeWM7J5wLkeJmhzRXh8cs1f5K8aGGE1jT0Srhv6KfqJszqJqOAlyE4VEBkchFvsEAB0b38BgSaRy~~AoGrkuh1DgpBjHw8HHGWg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
                             alt="bandung">
                     </div>
                     <div class="h-96 w-96 mx-12 hover:scale-105 duration-500 transform transition cursor-pointer">
@@ -383,7 +372,7 @@ use Illuminate\Support\Facades\Auth;
                             </h1>
                         </div>
                         <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/7bfb/a07c/73199bf39b5671d3c72b81713ffeeb27?Expires=1643587200&Signature=AJkpxESzwT8KJs9aexX1rAKBYOvcEAhM5jYaOfcaO411633LQkS2B1RmKrt549pHx8ohlVQvik3ZT3HKHrmQ4DdWs6WNlRwZ4KDt5Bxx37HdvFfJl8JO6ESAUULMxx7mokKTQAR5K-WZDJjuFOte~3XCiNiJ-CM3VtDy6OG7jSa6-MFsbEi6HSm7I4hzXXw1Hc5aPR7O4GOMA-SfXRnKT7yueTmNUPfHI-S-ubEP9KxUbrKfDtQtpy7ro7qnPZSYdiGdRkaPHe8qwsxUetOYGPnbpR~nQpRaO-iRrToRiyHg4odJC7dA~ygNERHkMRJhjXOe0Xj5Ya6b4-6tL4iJ6Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                            src="https://s3-alpha-sig.figma.com/img/7bfb/a07c/73199bf39b5671d3c72b81713ffeeb27?Expires=1642377600&Signature=P5Umzsjj7iWN7PCeCedxzlcKZKmak9kKCQk1VSkTZn4f5UkeSLtdtMPL-hKH1h5LO8zXa8vQq7oRtDJ4rXGEK0duunMC~DXHKMUunrzR9YGdyBUhweT7lhe8aAHJ2Qzy257cy0dO1sS2jm1TUz4yujG7ypKpx7AO4db6yb7c70TE0zxs12YuhCUVirUGyDt6wu~S9IHwbXB3dnyiCn4voEBizBVwfJzQnYF-0X~gGdNiEKfg4sAutZIQye-ntTijFfBSo1hgLZJwrWt6HiQPMWe3xRLntcB7o-B5xkd53s3ElY1jhAj5SUwW3JNE96hbgizHOGEGMjqFT7feEYr8Nw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
                             alt="bogor">
                     </div>
                     <div class="h-96 w-96 mx-12 hover:scale-105 duration-500 transform transition cursor-pointer">
@@ -393,7 +382,7 @@ use Illuminate\Support\Facades\Auth;
                             </h1>
                         </div>
                         <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/4d1f/15d7/92e2b42ab6f65c282033560a4b3eb046?Expires=1643587200&Signature=HTnvg524etunnfV6Q-7h9aZGmDbAtl5lS6LaEiQR6pwblW8FCLam21Hx3Pa3iwF2M2T14JTVL7HDGwPMV0vlrRK4aq7ld0ZJ-YSV7OaR2s9phyM4nLdbPrC~oFfE38~xg0UviWJwG7NxVho6x7hGzZlpGn3vvMjf~Pz4cP4lT24whJIV2ox05qwyETzCXUzgyKYKiJIc9dgd4rnlWjMDm2vchuPVEsMyO9Wx6NZwFRoU9u12i2QIGlvpv0vfEGj3h2weDHiKHrIisVmRNA6MZeFqUBxy0rC8~GDSAQKpwAE7v-fvsk7A-tPYHkMMYkSyHYQhAMJVeb-Ce9hJ9Ggc6A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                            src="https://s3-alpha-sig.figma.com/img/4d1f/15d7/92e2b42ab6f65c282033560a4b3eb046?Expires=1642377600&Signature=SrH8NQP-C35TElajq3HAdp1q-uNv-LCb7w1PLGog~2wwY~K2Kkzq9MjeZkNR3qtg38hRHRFCCRCcdwP-oBwa2dZTtZs4E~KbxPeAygP6ftUa4m0zPlJ-XLBXGodJuoeH~C2ncD6BTuVfT~t8BXwmFRoPYPst0-KYAqiKS~exV2gNESMeJcL3ErShd7lpYKlCEgMNzdBu48gZloUlKQCD-K2IOWw5fWO8tagLGUvxUTnfgXNk-etPWX8dxjN1UhtSkZYuJeu3EJU5EPcRfzZNUvv4jQZxY0DN0F6lPGBi60NplhAlppPFLin~Ek7F3guT8FGh1BBFzM-6UMbFS-RTUg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
                             alt="bali">
                     </div>
                 </div>

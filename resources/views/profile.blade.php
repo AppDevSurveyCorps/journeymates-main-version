@@ -26,7 +26,7 @@
             <main class="profile-page">
                 <section class="relative block h-500-px">
                     <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
-                        background-image: url('https://s3-alpha-sig.figma.com/img/58b1/4433/85f6d06b4105824b80ab2321a42ddce7?Expires=1643587200&Signature=GIVbOHL5jonKo1RJcTrgnO~-4dSuUNd2p34X676PV2u9~KRNT4OCJY6evAJXvRKNg1TtvdB2i089T-yp6IXhWemHf9DHb2dKA2JtlzRkiu0cJs9IvSsG0QxLwRhjHIRepi4-U1XGkjeqr9nv7OnWeiyMRs47wk5TIF1C42yX9kkciVMo3~NwdJDB~chcjyXCj6NZWplvCxP3S65z~t2NKGA67UkurxFd8BH965CZ7CIqb8SxKfUo7VKFDc2ahfHVYzwV6iMSofR6Z9J6NoxFM8yxB4FAM6xhfJxMALkbmWKIPd3K~nFk1ncwmw-nlrdFqK28cm5mP0CmeWPbjbqKSA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
+                        background-image: url('https://s3-alpha-sig.figma.com/img/58b1/4433/85f6d06b4105824b80ab2321a42ddce7?Expires=1642377600&Signature=D1bo0KhctwMXddTHN-AjmArG6jXne7bZTeg2BGvpv7C9huXPHDCFKgSXv7JhRR64dNlQQsA-NSpkrIPss-R~~d11aebEnisbAUD~JJVcJOdO-whV8M8eY23VMhMst4klHspW9f~xHPrnxHSP2N8gzKv6EH0f6Akk~8Rzo8RYy~le8rKMmqWEw8s-e6yhQZVNiOWuf8j33UmsqcbPhtVJzjiVNIOvFc8maPPrQ7QFZwoXgeiWgQXjKD43j8f~giAjGhl2TFrx40djgNHWSQSxrSfCEORgpbGBAljBJRbsynnHKC6sZIYL-7OolPkAHEGEXQwwVnfx65Az5Eqt2RoCUg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
                         ">
                         <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
                     </div>
