@@ -144,6 +144,13 @@ class UserController extends Controller
         return view('reviewhome');
     }
 
+    public function placedetails()
+    {
+        
+        
+        return view('placedetails');
+    }
+
   
     public function manage_user() 
     {
