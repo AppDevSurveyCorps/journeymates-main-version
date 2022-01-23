@@ -234,6 +234,45 @@ class UserController extends Controller
         return redirect('/manage_place');
         
     }
+
+    public function edit_place($id) 
+    {
+       
+        $places = DB::table('tblplaces')->where('place_id',$id)->get();
+
+        return view('/admin/admin_editplace',['place' => $places]);
+        
+    }
+
+    public function update_place(Request $request)
+    {
+
+        $name = $request->file('place_image')->getClientOriginalName();  
+        $path = $request->file('place_image')->store('public/images');
+        $placeinfo = pathinfo($path)['basename'];
+
+	DB::table('tblplaces')->where('place_id',$request->id)->update([
+		'place_name' => $request->place_name,
+		'place_description' => $request->place_description,
+		'place_ratings' => $request->place_ratings,
+		'place_image' => $placeinfo,
+	]);
+
+    
+    // if($request -> hasFile('place_image'))
+    // {
+    //     $destination = 'admin_update_place';
+    //     $file = $request ->file('place_image');
+    //     $extention = $file->getClientOriginalExtension();
+    //     $filename = time(). '.'.$extention;
+    //     $file -> move()
+
+
+
+    // }
+	
+	return redirect('/manage_place');
+    }
 }
 
 

@@ -82,6 +82,10 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('add_place',[UserController::class, 'store_place'])->name('place.store'); 
 
     Route::get('delete/{id}',[UserController::class,'delete_place']);
+
+    Route::get('/admin_editplace/{id}', [UserController::class, 'edit_place']); 
+    Route::post('/admin_update_place', [UserController::class, 'update_place'])->name('test.update_place');
+    // Route::put('admin_update_place/{id}' , [UserController::class, 'edit_place']);
     
     
   });

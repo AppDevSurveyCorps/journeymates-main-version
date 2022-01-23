@@ -22,7 +22,7 @@
           <input id="place_ratings" type="number" name="place_ratings"  class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
           <label for="Place Image" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
          
-          <input id="place_image" type="file" name="place_image"  autocomplete="place_image" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required onchange="previewImage()" />
+          <input id="place_image" type="file" name="place_image"  autocomplete="place_image" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
           <img class="img-preview img-fluid">
           <input type="submit" value="Add" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
             
@@ -30,28 +30,6 @@
         </form>
           
  
-        <script>
-
-          fucntion previewImage(){
-
-            const image = document.querySelector('#place_image');
-            const imgPreview = document.querySelector('.img-preview');
-
-            imgPreview.style.display = 'block';
-
-            const ofReader = new FileReader();
-            ofReader.readAsDataURL(image.files[0]);
-
-            ofReader.onload = function(oFREvent) {
-
-              imgPreview.src = oFREvent.target.result;
-
-            }
-
-
-          }
-          
-        </script>
      
     </div>
   </div>
