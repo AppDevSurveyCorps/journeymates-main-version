@@ -49,6 +49,8 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('reviewhome', [UserController::class, 'reviewhome']);
 
+    Route::get('placedetails', [UserController::class, 'placedetails']);
+
     Route::get('/signout','App\Http\Controllers\UserController@logout'); 
 
     Route::get('add_place',[UserController::class, 'add_place']); 
