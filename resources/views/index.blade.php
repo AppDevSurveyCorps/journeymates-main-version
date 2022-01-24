@@ -75,6 +75,8 @@ use Illuminate\Support\Facades\Auth;
                     </div>
                 </div>
             </div>
+
+
             <!--big searchbar-->
             <div class="container mx-auto pt-10">
                 <div class="mx-12 bg-center bg-cover"
@@ -93,6 +95,8 @@ use Illuminate\Support\Facades\Auth;
                     </form>
                 </div>
             </div>
+
+
             <!--small cards-->
             <div class="container mx-auto py-5 pb-16">
             <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">You might also like these</h1>
@@ -114,50 +118,36 @@ use Illuminate\Support\Facades\Auth;
                     </span>
                     <span class="flex items-center">
                         <i class="far fa-clock fa-fw text-gray-900 mr-2"></i> Last Updated at: {{ $place->updated_at }}
-                    </span>        
+                    </span>
+                       
                     </div>
-                    <div class="p-4 flex items-center text-sm text-gray-600"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-yellow-500"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-current text-gray-400"><path d="M8.128 19.825a1.586 1.586 0 0 1-1.643-.117 1.543 1.543 0 0 1-.53-.662 1.515 1.515 0 0 1-.096-.837l.736-4.247-3.13-3a1.514 1.514 0 0 1-.39-1.569c.09-.271.254-.513.475-.698.22-.185.49-.306.776-.35L8.66 7.73l1.925-3.862c.128-.26.328-.48.577-.633a1.584 1.584 0 0 1 1.662 0c.25.153.45.373.577.633l1.925 3.847 4.334.615c.29.042.562.162.785.348.224.186.39.43.48.704a1.514 1.514 0 0 1-.404 1.58l-3.13 3 .736 4.247c.047.282.014.572-.096.837-.111.265-.294.494-.53.662a1.582 1.582 0 0 1-1.643.117l-3.865-2-3.865 2z"></path></svg><span class="ml-2">34 Bewertungen</span></div>
+
+                    @if ($place -> total_place_rating == 0 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"></i><i class="far fa-star"> </i><i class="far fa-star"></i> <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+
+                    @elseif ($place -> total_place_rating == 1 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"><i class="fas fa-star"> </i><i class="far fa-star"></i> <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+
+                    @elseif ($place -> total_place_rating == 2 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"><i class="fas fa-star"> </i><i class="fas fa-star"></i> <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+
+                    @elseif ($place -> total_place_rating == 3 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"><i class="fas fa-star"> </i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+
+                    @elseif ($place -> total_place_rating == 4 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"><i class="fas fa-star"> </i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+                   
+                    @elseif ($place -> total_place_rating == 5 )
+                    <div class="p-4 flex items-center text-sm text-gray-600"><i class="fas fa-star"> </i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>&nbsp;Rating :{{ $place->total_place_rating }}</div>
+                    @endif
+
                 </a>
                 </div>
             @endforeach
                 </div>
             </div>
             <!--big cards-->
-            <div class="container mx-auto py-5 pb-16">
-                <h1 class="text-2xl pb-6 mx-12" style="font-family: 'Nunito', sans-serif;">Dream your next trip</h1>
-                <div class="flex justify-between">
-                    <div class="h-96 w-96 mx-12 hover:scale-105 duration-500 transform transition cursor-pointer">
-                        <div class="absolute bottom-5">
-                            <h1 class="text-3xl text-white ml-5" style="font-family: 'Quicksand', sans-serif;">Bandung,
-                                <br>Indonesia
-                            </h1>
-                        </div>
-                        <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/72f0/4146/5f93f37b9ef9941e3ca8314daaf4fd80?Expires=1642377600&Signature=X6BpnHNSRabh6CRzGC3MdlCqRrEZbtBC8djYw6fleeYPIvIdZTmjWcTB-5usvpSjDeftq2UEzOT-XkbIAqK0iZ0ARvBrDTQIejrSw55z5s1pMzEwbmsUfUtpWsKGyEhS-qDdCqibiyUjpd4nnzufcdLv2taWkgFvv1uhIeCVaYkJnLnm1e7CRs4gMXFURPWTLsh~0tvZcww0pOSjYG0MB2RNP1cUhpjQ~nU1NxlajqBPA3GvBU~UeWM7J5wLkeJmhzRXh8cs1f5K8aGGE1jT0Srhv6KfqJszqJqOAlyE4VEBkchFvsEAB0b38BgSaRy~~AoGrkuh1DgpBjHw8HHGWg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                            alt="bandung">
-                    </div>
-                    <div class="h-96 w-96 mx-12 hover:scale-105 duration-500 transform transition cursor-pointer">
-                        <div class="absolute bottom-5">
-                            <h1 class="text-3xl text-white ml-5" style="font-family: 'Quicksand', sans-serif;">Bogor,
-                                <br>Indonesia
-                            </h1>
-                        </div>
-                        <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/7bfb/a07c/73199bf39b5671d3c72b81713ffeeb27?Expires=1642377600&Signature=P5Umzsjj7iWN7PCeCedxzlcKZKmak9kKCQk1VSkTZn4f5UkeSLtdtMPL-hKH1h5LO8zXa8vQq7oRtDJ4rXGEK0duunMC~DXHKMUunrzR9YGdyBUhweT7lhe8aAHJ2Qzy257cy0dO1sS2jm1TUz4yujG7ypKpx7AO4db6yb7c70TE0zxs12YuhCUVirUGyDt6wu~S9IHwbXB3dnyiCn4voEBizBVwfJzQnYF-0X~gGdNiEKfg4sAutZIQye-ntTijFfBSo1hgLZJwrWt6HiQPMWe3xRLntcB7o-B5xkd53s3ElY1jhAj5SUwW3JNE96hbgizHOGEGMjqFT7feEYr8Nw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                            alt="bogor">
-                    </div>
-                    <div class="h-96 w-96 mx-12 hover:scale-105 duration-500 transform transition cursor-pointer">
-                        <div class="absolute bottom-5">
-                            <h1 class="text-3xl text-white ml-7" style="font-family: 'Quicksand', sans-serif;">Bali,
-                                <br>Indonesia
-                            </h1>
-                        </div>
-                        <img class="w-full h-96 object-cover rounded"
-                            src="https://s3-alpha-sig.figma.com/img/4d1f/15d7/92e2b42ab6f65c282033560a4b3eb046?Expires=1642377600&Signature=SrH8NQP-C35TElajq3HAdp1q-uNv-LCb7w1PLGog~2wwY~K2Kkzq9MjeZkNR3qtg38hRHRFCCRCcdwP-oBwa2dZTtZs4E~KbxPeAygP6ftUa4m0zPlJ-XLBXGodJuoeH~C2ncD6BTuVfT~t8BXwmFRoPYPst0-KYAqiKS~exV2gNESMeJcL3ErShd7lpYKlCEgMNzdBu48gZloUlKQCD-K2IOWw5fWO8tagLGUvxUTnfgXNk-etPWX8dxjN1UhtSkZYuJeu3EJU5EPcRfzZNUvv4jQZxY0DN0F6lPGBi60NplhAlppPFLin~Ek7F3guT8FGh1BBFzM-6UMbFS-RTUg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-                            alt="bali">
-                    </div>
-                </div>
-            </div>
+            
         </div>
         <!--footer-->
         @include('includes.footer')

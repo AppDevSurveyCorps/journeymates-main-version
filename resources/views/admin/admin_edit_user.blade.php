@@ -27,8 +27,12 @@
           <option value="ADMIN">ADMIN</option>
           <option value="USER">USER</option>
         </select>
-        
-       
+
+        @if ($a -> user_id == ucwords(auth()->user()->user_id) )
+        <label for="password" class="block text-xs font-semibold text-gray-600 uppercase">Password</label>
+        <input id="password" placeholder="Password " type="password" name="password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required /> 
+
+        @endif
        
         <button type="submit" value="" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
           Update User Information

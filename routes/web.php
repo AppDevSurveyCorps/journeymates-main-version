@@ -57,7 +57,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('places', [UserController::class, 'reviewpost']);
 
     Route::get('add_place',[UserController::class, 'add_place']); 
-    Route::post('add_place',[UserController::class, 'store_place'])->name('place.store'); 
+    Route::post('add_place',[UserController::class, 'store_place'])->name('place.store');
+    
+    Route::get('/admin_edit_user/{id}', [UserController::class, 'edit_user']); 
+    Route::post('/admin_update_user', [UserController::class, 'update_user'])->name('test.update_user');
 
     
     if (Auth::check()) {
@@ -78,14 +81,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('admin', [AdminController::class, 'admin']); 
     Route::get('manage_user', [UserController::class, 'manage_user']); 
 
-    Route::get('/admin_edit_user/{id}', [UserController::class, 'edit_user']); 
-    Route::post('/admin_update_user', [UserController::class, 'update_user'])->name('test.update_user');
+   
 
     Route::get('manage_place', [UserController::class, 'manage_place']);
 
-    Route::get('delete/{id}',[UserController::class,'delete_user']);
+    Route::get('delete_user/{id}',[UserController::class,'delete_user']);
 
-     Route::get('delete/{id}',[UserController::class,'delete_place']);
+     Route::get('delete_place/{id}',[UserController::class,'delete_place']);
 
     Route::get('/admin_editplace/{id}', [UserController::class, 'edit_place']); 
     Route::post('/admin_update_place', [UserController::class, 'update_place'])->name('test.update_place');
@@ -95,7 +97,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('add_category',[UserController::class, 'add_category']); 
     Route::post('add_category',[UserController::class, 'store_category'])->name('category.store'); 
 
-    Route::get('delete/{id}',[UserController::class,'delete_category']);
+    Route::get('delete_category/{id}',[UserController::class,'delete_category']);
 
     Route::get('/admin_editcategory/{id}', [UserController::class, 'edit_category']); 
     Route::post('/admin_updatecategory', [UserController::class, 'update_category'])->name('test.update_category');

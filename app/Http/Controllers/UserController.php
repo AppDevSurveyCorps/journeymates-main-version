@@ -195,14 +195,42 @@ class UserController extends Controller
     public function update_user(Request $request)
     {
 
-	DB::table('users')->where('user_id',$request->id)->update([
-		'fname' => $request->fname,
-		'email' => $request->email,
-		'mnumber' => $request->mnumber,
-		'role' => $request->role,
-	]);
+    if( $request -> id == ucwords(auth()->user()->user_id))
+    {
+
+    DB::table('users')->where('user_id',$request->id)->update([
+        'fname' => $request->fname,
+        'email' => $request->email,
+        'mnumber' => $request->mnumber,
+        'role' => $request->role,
+        'password' => Hash::make($request->password),
+
+        
+       
+    ]);
+
+    return redirect('/profile');
+
+    }
+
+    else{
+
+        DB::table('users')->where('user_id',$request->id)->update([
+            'fname' => $request->fname,
+            'email' => $request->email,
+            'mnumber' => $request->mnumber,
+            'role' => $request->role,
+
+            
+        ]);
+
+        return redirect('/manage_user');
+
+    } 
+
+
 	
-	return redirect('/manage_user');
+	
     }
 
     public function delete_user($id) 
