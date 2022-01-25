@@ -59,8 +59,8 @@
                             <div class="bg-white p-8 rounded-md w-full">
                                 <div class=" flex items-center justify-between pb-6">
                                     <div>
-                                        <h2 class="text-gray-600 font-semibold">Place</h2>
-                                        <span class="text-xs">All Place</span>
+                                        <h2 class="text-gray-600 font-semibold">Category</h2>
+                                        <span class="text-xs">All Categories</span>
                                     </div>
                                     <div class="flex items-center justify-between">
                                         <div class="flex bg-gray-50 items-center p-2 rounded-md">

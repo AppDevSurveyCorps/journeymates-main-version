@@ -101,6 +101,10 @@
                                                         </th>
                                                         <th
                                                             class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                                            Category
+                                                        </th>
+                                                        <th
+                                                            class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                                             Action
                                                         </th>
                                                     </tr>
@@ -129,6 +133,10 @@
                                                             
                                                             <img src="{{ asset('storage/images/' . $p->place_image) }}" width="140px" height="140px">
                                                             @endif
+                                                        </td>
+
+                                                        <td class="px-5 py-5 bg-white text-sm">
+                                                            <p class="text-gray-900 whitespace-no-wrap">{{ $p->Categories }}</p>
                                                         </td>
                                                         
                                                         <td class="py-3 px-6 text-center">

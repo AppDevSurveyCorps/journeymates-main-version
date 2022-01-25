@@ -29,6 +29,11 @@ Route::post('register',[UserController::class, 'store'])->name('test.store');
 
 Route::get('index', [HomeController::class, 'index']);
 
+Route::get('Hotels', [UserController::class, 'hotels']);
+Route::get('Restaurants', [UserController::class, 'restaurants']);
+Route::get('Cities', [UserController::class, 'cities']);
+Route::get('Landmarks', [UserController::class, 'landmarks']);
+
 
 
 

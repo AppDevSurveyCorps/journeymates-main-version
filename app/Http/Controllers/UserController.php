@@ -123,6 +123,53 @@ class UserController extends Controller
         return view('profile');
     }
 
+    public function hotels()
+    {
+       
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 1)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
+
+    }
+
+    public function restaurants()
+    {
+       
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 2)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
+   
+    }
+
+    public function landmarks()
+    {
+       
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 3)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
+   
+    }
+
+    public function cities()
+    {
+       
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 5)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
+   
+    }
+
+   
+
+    
     public function dashboard()
     {
         
@@ -244,7 +291,11 @@ class UserController extends Controller
 
     public function manage_place() 
     {
-        $places = DB::table('tblplaces')->paginate(5);
+        $places = DB::table('tblplaces')
+        ->join('catagories', 'tblplaces.intCatId', '=', 'catagories.intCatId')
+        ->select('tblplaces.*', 'catagories.Categories')
+        // ->get()
+        ->paginate(5);
        
 
         return view('admin.admin_manageplaces', ['place' => $places]);
@@ -309,15 +360,16 @@ class UserController extends Controller
 		'place_name' => $request->place_name,
 		'place_description' => $request->place_description,
 		'place_ratings' => $request->place_ratings,
+        'intCatId' => $request->intCatId,
 		'place_image' => $placeinfo,
+
 	]);
 
-    
-   
 	
 	return redirect('/manage_place');
     }
 
+    
 
 
     public function manage_category() 
@@ -383,6 +435,8 @@ class UserController extends Controller
 	]);
     return redirect('/manage_category');
     }
+
+    
 }
 
 

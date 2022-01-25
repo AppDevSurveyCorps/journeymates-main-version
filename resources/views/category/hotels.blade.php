@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Auth;
                     <div class="container flex flex-wrap justify-between items-center">
                         @foreach ($data as $dat)
                         @if ($dat->intCatId == 4)
-                        <a href="{{ url('/trending') }}">
+                        <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
                                 <div class="mx-8 my-4 flex justify-between items-center"
@@ -60,7 +60,7 @@ use Illuminate\Support\Facades\Auth;
                             </div>
                         </a>
                         @else
-                        <a href="{{ url($dat ->Categories) }}">
+                        <a href="#">
                             <div
                                 class="border border-emerald-400 w-52 h-16 rounded hover:bg-emerald-500 duration-500 transform transition hover:text-white">
                                 <div class="mx-8 my-4 flex justify-between items-center"
@@ -70,7 +70,6 @@ use Illuminate\Support\Facades\Auth;
                                 </div>
                             </div>
                         </a>
-                        
                         @endif
                         @endforeach
                     </div>
@@ -100,7 +99,7 @@ use Illuminate\Support\Facades\Auth;
 
             <!--small cards-->
             <div class="container mx-auto py-5 pb-16">
-            <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">You might also like these</h1>
+            <h1 class="text-2xl pb-6 mx-12 pt-8" style="font-family: 'Nunito', sans-serif;">Hotels and Resorts</h1>
             <div class="flex flex-wrap -mx-4">
             @foreach($place as $place)
                 <div class="w-full sm:w-2 md:w-2 xl:w-1/4 p-4">

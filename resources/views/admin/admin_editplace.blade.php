@@ -25,6 +25,15 @@
           
           <label for="Rating" class="block text-xs font-semibold text-gray-600 uppercase">Place Rating</label>
           <input id="place_ratings" type="number" name="place_ratings" value="{{ $p->place_ratings }}" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+
+          <label for="Category" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Category</label>
+            
+            <select id="intCatId" name="intCatId">
+              <option value="1">Hotel</option>
+              <option value="2">Restaurant</option>
+              <option value="3">Landmark</option>
+              <option value="4">City</option>
+            </select>
           
           <label for="Place Image" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Place Image</label>
          
