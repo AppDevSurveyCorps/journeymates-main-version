@@ -32,7 +32,7 @@
               <option value="1">Hotel</option>
               <option value="2">Restaurant</option>
               <option value="3">Landmark</option>
-              <option value="4">City</option>
+              <option value="5">City</option>
             </select>
           
           <label for="Place Image" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Place Image</label>

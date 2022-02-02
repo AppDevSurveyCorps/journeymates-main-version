@@ -47,7 +47,7 @@ Route::get('dashboard','App\Http\Controllers\UserController@dashboard');
 
 
 
-Route::group(['middleware' => 'auth'], function(){
+Route::group(['middleware' => 'auth'], function(){ //user needs to login to do the operation below
     Route::get('profile', [UserController::class, 'profile']);
 
     Route::get('bookmarks', [UserController::class, 'bookmarks']);
@@ -82,7 +82,7 @@ Route::group(['middleware' => 'auth'], function(){
 }
 );
 
-Route::middleware(['auth', 'isAdmin'])->group(function () {
+Route::middleware(['auth', 'isAdmin'])->group(function () { //only admin can operates the operation below
     Route::get('admin', [AdminController::class, 'admin']); 
     Route::get('manage_user', [UserController::class, 'manage_user']); 
 
