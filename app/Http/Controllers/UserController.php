@@ -24,13 +24,32 @@ class UserController extends Controller
      */
     public function index()
     {
+
+
+
+
         if(Auth::check()) {
                 $data = DB::table('catagories')->get();
                 $dataplace = DB::table('tblplaces')->get();
-                return view('index', ['data' => $data], ['place' => $dataplace]);
+                
             }
                 return view('includes/signin');
     }
+
+    // public function search(Request $request)
+    // {
+    //     $search = $request->search;
+
+    //     $dataplace = DB::table('tblplaces')->where('place_name','like',"%".$search."%");
+
+    //     $data = DB::table('catagories')->where('Categories','like',"%".$search."%");
+       
+       
+    //     return view('index', ['data' => $data], ['place' => $dataplace]);
+        
+
+
+    // }
 
     public function signin()
     {

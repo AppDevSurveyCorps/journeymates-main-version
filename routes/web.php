@@ -34,7 +34,8 @@ Route::get('Restaurants', [UserController::class, 'restaurants']);
 Route::get('Cities', [UserController::class, 'cities']);
 Route::get('Landmarks', [UserController::class, 'landmarks']);
 
-
+Route::get('/place',[UserController::class, 'index']);
+Route::get('/search', [UserController::class, 'search'])->name('web.search');
 
 
 
