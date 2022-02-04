@@ -61,6 +61,8 @@ Route::group(['middleware' => 'auth'], function(){ //user needs to login to do t
 
     Route::get('places/{id}', [UserController::class, 'reviewhome']);
     Route::post('places', [UserController::class, 'reviewpost']);
+    Route::post('addbookmark', [UserController::class, 'addbookmark']);
+    Route::post('addcomment', [UserController::class, 'addcomment']);
 
     Route::get('add_place',[UserController::class, 'add_place']); 
     Route::post('add_place',[UserController::class, 'store_place'])->name('place.store');

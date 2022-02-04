@@ -108,6 +108,39 @@
 				  Submit Review
 				</button> 
 			</form>
+
+			<form action="/addbookmark" method="POST">
+				{{ csrf_field() }}
+				<input type="hidden" value="{{$place->place_id}}" name="place_id"/>
+				<input type="hidden" value="{{$place->place_name}}" name="place_name"/>
+				<input type="hidden" value="{{$place->place_image}}" name="place_image"/>
+				<button type="submit" class="bg-gray-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full mt-10">
+					Add to bookmark
+			 	</button> 
+			</form>
+	</div>
+
+			<div>
+				<h1 class="text-2xl font-bold pt-8 lg:pt-0">
+					Add Your Comment
+				</h1>
+				<form action="/addcomment" method="post">
+					{{ csrf_field() }}
+					<textarea class="border" name="comments" id="" cols="50" rows="2" required></textarea>
+					<input type="hidden" value="{{$place->place_id}}" name="place_id"/>
+					<button type="submit" class="bg-gray-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full mt-4">
+						Submit Comment
+					 </button> 
+				</form>
+				<h1 class="text-2xl font-bold pt-8 lg:pt-0 mt-10">
+					Comment Section
+				</h1>
+				@foreach($comments as $comment)
+				<div class="my-4 bg-gray-200 px-4 ">
+					<h3 class="text-xl">{{$comment->fname }}</h3>
+					<p class="text">{{$comment->review }}</p>
+				</div>
+				@endforeach
 			</div>
 
 			<div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">

@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\tblplaces;
 use App\Models\catagories;
 use App\Models\user;
+use App\Models\bookmarks;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -198,19 +199,21 @@ class UserController extends Controller
 
     public function bookmarks()
     {
+        $users = auth()->user()->user_id;
+        $place =  DB::table('bookmarks')->where('user_id',$users)->get();
         
-        
-        return view('bookmarks');
+        return view('bookmarks',['place'=>$place]);
     }
 
     public function reviewhome($id)
     {
         $place = DB::table('tblplaces')->where('place_id', $id)->first();
+        $comment = DB::table('comments')->where('place_id',$id)->get();
         $dbviewercount = $place->page_viewer_count;
         DB::table('tblplaces')->where('place_id',$id)->update([
             'page_viewer_count' => $dbviewercount + 1,
         ]);
-        return view('places' , ['place' => $place]);
+        return view('places' , ['place' => $place, 'comments' => $comment] );
     }
 
     public function placedetails()
@@ -236,6 +239,29 @@ class UserController extends Controller
             'total_place_rating' => $postedtotal
         ]);
 
+        return redirect('/index');
+    }
+
+    public function addbookmark (Request $request) {
+        $place_id = $request->place_id;
+        $place_name = $request->place_name;
+        $place_image = $request->place_image;
+        $users = auth()->user()->user_id;
+
+
+        DB::table('bookmarks')->insert(['place_id' => $place_id, 'user_id' => $users, 'place_name' => $place_name, 'place_image' => $place_image]);
+        
+        return redirect('/index');
+    }
+
+    public function addcomment (Request $request) {
+        $place_id = $request->place_id;
+        $comments = $request->comments;
+        $users = auth()->user()->fname;
+
+
+        DB::table('comments')->insert(['place_id' => $place_id, 'fname' => $users, 'review' => $comments]);
+        
         return redirect('/index');
     }
   

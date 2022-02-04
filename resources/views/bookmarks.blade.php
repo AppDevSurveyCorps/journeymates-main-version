@@ -24,8 +24,18 @@
             @include('includes.navbar')
             <div class="container mx-auto pt-48">
                 <h1 class="text-2xl text-center" style="font-family: 'Nunito', sans-serif;">Bookmarks</h1>
-                <h2 class="text-2xl text-center mt-24" style="font-family: 'Nunito', sans-serif;">Looks like you still
-                    don't have any bookmark. Start saving your wishlist destination trip, travel later!</h2>
+                @foreach($place as $place)
+                <a href="/places/{{ $place->place_id}}">
+                    <div class="flex my-4 mx-32">
+                        <div class="w-full lg:w-2/5 ">
+                            <img class="rounded" src="{{ asset('storage/images/' . $place->place_image) }}" alt="">
+                        </div>
+                        <div class="">
+                            <h1 class="mt-24 ml-10 text-4xl">{{$place->place_name }}</h1>
+                        </div>
+                    </div>
+                </a>
+                @endforeach
             </div>
         </div>
         <!--footer-->

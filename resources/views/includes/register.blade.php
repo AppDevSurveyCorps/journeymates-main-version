@@ -21,7 +21,7 @@
       <label for="mnumber" class="block text-xs font-semibold text-gray-600 uppercase">Mobile Number</label>
       <input id="mnumber" type="tel" name="mnumber" placeholder="+60 123 4567"  class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
       <label for="password" class="block mt-2 text-xs font-semibold text-gray-600 uppercase">Password</label>
-      <input id="password" type="password" name="password" placeholder="********" autocomplete="current-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />
+      <input id="password" type="password" name="password" placeholder="********" autocomplete="current-password" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required minlength="6"/>
       <input type="submit" value="Register" class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">
         
       <br><br>
