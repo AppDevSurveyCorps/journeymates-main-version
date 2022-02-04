@@ -187,6 +187,19 @@ class UserController extends Controller
    
     }
 
+    
+    public function trending()
+    {
+       
+            $page_viewer_count = DB::table('catagories')->get();
+            $data = DB::table('catagories')->get();
+            $dataplace = DB::table('tblplaces')
+                ->where('intCatId', '=', 5)
+                ->get();
+            return view('index', ['data' => $data], ['place' => $dataplace]);
+   
+    }
+
    
 
     
@@ -360,6 +373,7 @@ class UserController extends Controller
 
         $add->place_name = $request->place_name;
         $add->place_description = $request->place_description;
+        $add->intCatId = $request->intCatId;
         $add->place_ratings = $request->place_ratings;
         $add->place_image = $placeinfo;
         $add->page_viewer_count = 1;
