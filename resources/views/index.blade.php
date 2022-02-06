@@ -81,7 +81,7 @@ use Illuminate\Support\Facades\Auth;
             <!--big searchbar-->
             <div class="container mx-auto pt-10">
                 <div class="mx-12 bg-center bg-cover"
-                    style="background-image: url(https://s3-alpha-sig.figma.com/img/6d5d/1bc9/bddbce21a89bf98295e7de6582d6b6b4?Expires=1642982400&Signature=IvRqsRqAgQNypSIdLUM4rfUh2Xp3kcxiuLmrOUh8RxiimvhfwqeynidSfSLvNFU0IDqhs8Axhvdacjsugqgb2y~I920UgA7E8nl67te0PZCaUti3Soa5RYClbM2~oQrR2Z4rOWxQvq8fES6Zo6zvN1uyp9NMosaDJXJKFls-4AqPp05gG8sP51jkgwrX8y4B01pHoQFLVpYMioXYDojPUyeak2Wh2Bfzb7kQqsLqSaE9xGIQcCDfbGklVJpKXjGArKOEzxwruZppYnnW0zyeq8g4IxEbsc9S8Z8nMG82Exw2CC-wwOqB0XqNRwn6ooA3tLNoNjr5w2zRPmcA~cL1lw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)">
+                    style="background-image: url(https://s3-alpha-sig.figma.com/img/6d5d/1bc9/bddbce21a89bf98295e7de6582d6b6b4?Expires=1644796800&Signature=fRGTT~XSz2OJcuN-IFuDYwn7Eagze-hXRUdai~YMBI4vwMWDX1jFnGf7aXGAZA11xWg-OQnqDUTG~npjw6oj1~9NLeZj2OEx--9oiNSpwN83wW780HYZClosENIvqsenVD1l1P1RE2sobMRxR4~PvjW5yLbcv4QZ18coKMoLipqAT~m-ZYV7za9db1mSvy6PjN-i9JeTMlCfAZ0orIcqVr3jQOxVUbBhCy8wDtGfBZ~BF7oPM8lm0OXRe8XaG7KDEnDGpKXoW3kGzchtGGSbR1gVlzvp-MUUAK8U6YEGPGgS69SskPvv~IqA64TaunOtiS8wPr8QGoFweOOgQDK3lg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA)">
                     <form class="flex pt-2 relative mx-auto text-gray-600 " action="/posts" >
                         <input class="border-2 border-gray-300 bg-white h-16 w-full px-10 rounded-full text-xl focus:outline-none mx-12 my-32 leading-[4rem]" type="text" name="search" placeholder="Search..." value="{{ old('search') }}">
                         <button type="submit" value="search" class="absolute right-20 top-40">
